@@ -44,6 +44,13 @@
     -   ④ 根据接口文档 发起 post 请求，完成登录
     -   ⑤ 提示登录成功跳转到首页
     -   注意：
-        -   ① 登录的用户都有token秘钥，来保证用户权限，把秘钥保存到 `localStorage.setItem('token',res.token);` 本地存储上面
+        -   ① 登录的用户都有 token 秘钥，来保证用户权限，把秘钥保存到 `localStorage.setItem('token',res.token);` 本地存储上面
 -   优化代码
-    - ① 优化接口链接 新建baseAPI.js 文件 生成全局接口的根路径
+    -   ① 优化接口链接 新建 baseAPI.js 文件 生成全局接口的根路径
+
+# 首页页面的书写
+
+-   ① 复制 layui 库的结构布局代码，完成首页的基本布局
+    -   ① 修改 结构布局
+    -   ② 引入样式文件 layui.css 和 layui.all.js
+-   ② 完成侧边栏的基本布局
