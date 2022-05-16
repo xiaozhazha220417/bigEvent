@@ -1,0 +1,9 @@
+.layui-footer{
+    text-align: center;
+    font-size: 12px;
+
+}
+.splitLine{
+    padding-right: 5px;
+    border-right: 2px solid gray;
+}
