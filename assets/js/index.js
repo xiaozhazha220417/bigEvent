@@ -9,7 +9,7 @@ function getUserInfo() {
         // },
         success: (res) => {
             if (res.status !== 0) return layer.msg(res.message);
-            console.log(res);
+            // console.log(res);
             // 调用渲染用户头像的 函数 renderAvatar
             renderAvatar(res.data);
         },

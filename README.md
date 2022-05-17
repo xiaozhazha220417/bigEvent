@@ -74,5 +74,35 @@
 
 # 完成非法用户拦截
 
-- 通过 Ajax 请求的回调函数 `complete` 完成 拦截非法用户
-  - `complete` 发起Ajax请求不管成功和失败都会调用  complete 回调函数，检测服务器返回的信息判断用户是否合法，不合法就强制退出
+-   通过 Ajax 请求的回调函数 `complete` 完成 拦截非法用户
+    -   `complete` 发起 Ajax 请求不管成功和失败都会调用 complete 回调函数，检测服务器返回的信息判断用户是否合法，不合法就强制退出
+
+# 完成个人中心 基本信息 的功能
+
+-   ① 新建文件 user_info.html user_info.css user_info.js
+-   ② 书写 基本页面布局
+-   ③ 完成修改用户基本信息功能
+    -   ① 通过 layui 监测表单的提交信息
+    -   ② 初始化用户信息 发起 get 的请求，渲染页面
+    -   ③ 重置按钮功能 表示再一次 发起 get 请求，渲染页面
+    -   ④ 提交修改按钮功能 表示 发起 post 请求，把表单的数据提交给服务器修改用户基本信息
+    -   ⑤ 根据响应回来的数据，重新渲染页面信息,调用父页面的方法 `window.parent.getUserInfo();`
+
+# 完成重置密码功能
+
+-   ① 新建文件 user_pwd.html user_pwd.css user_pwd.js
+-   ② 书写 基本页面布局
+-   ③ 完成 重置密码 功能
+    -   ① 通过 layui 监测表单的提交信息
+    -   ② 提交 重置密码 请求 完成重置密码
+
+# 完成更换头像功能
+
+-   ① 新建文件 user_avatar.html user_avatar.css user_avatar.js
+-   ② 书写 基本页面布局
+-   ③ 完成 更换头像 功能
+    -   ① 通过 插件`cropper`完成图片裁切
+    -   ② 给页面结构 增加 提交文件的 input 并且隐藏 `<input type="file" id="file" accept="image/png,image/jpeg" />`
+    -   ③ 为上传按钮绑定点击事件 --- 弹出选择图片的 功能框
+    -   ④ 为文件选择框绑定 change 事件 --- 当用户提交了图片后 修改 页面裁切区域的图片
+    -   ⑤ 为确定按钮，绑定事件 --- 头像上传服务器 ，重新渲染页面
