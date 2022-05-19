@@ -1,6 +1,6 @@
-let layer = layui.layer;
+let form = layui.form;
 // 检验表单
-FormData.verify({
+form.verify({
     pwd: [/^[\S]{6,12}$/, "密码必须6到12位，且不能出现空格"],
     samePwd: function (value) {
         if (value === $("[name=oldPwd]").val()) {
@@ -23,7 +23,7 @@ $('.layui-form').submit(function(e){
         data: $(this).serialize(),
         success: function(res){
             if(res.status !== 0) return layer.msg(res.message);
-            console.log(res);
+            // console.log(res);
             layer.msg(res.message);
             // 重置表单
             $('.layui-form')[0].reset()
